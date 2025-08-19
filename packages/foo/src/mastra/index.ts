@@ -6,6 +6,9 @@ import { weatherWorkflow } from './workflows/weather-workflow';
 import { weatherAgent } from './agents/weather-agent';
 
 import { NAME } from "@monorepo/bar"
+import type { NameType } from '@monorepo/bar';
+
+const loggerName: NameType = NAME
 
 export const mastra = new Mastra({
   workflows: { weatherWorkflow },
@@ -15,7 +18,7 @@ export const mastra = new Mastra({
     url: ":memory:",
   }),
   logger: new PinoLogger({
-    name: NAME,
+    name: loggerName,
     level: 'info',
   }),
 });

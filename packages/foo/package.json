@@ -18,13 +18,13 @@
   "dependencies": {
     "@monorepo/bar": "workspace:*",
     "@ai-sdk/openai": "^1.3.24",
-    "@mastra/core": "^0.13.2",
-    "@mastra/libsql": "^0.13.2",
-    "@mastra/loggers": "^0.10.6",
-    "@mastra/memory": "^0.12.2",
+    "@mastra/core": "alpha",
+    "@mastra/libsql": "alpha",
+    "@mastra/loggers": "alpha",
+    "@mastra/memory": "alpha",
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "mastra": "^0.10.21"
+    "mastra": "alpha"
   }
 }
