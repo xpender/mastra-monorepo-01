@@ -1,0 +1,1 @@
+export const OTHER_NAME = 'OTHER_NAME'

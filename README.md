@@ -1,14 +1,23 @@
-On this branch and commit the build currently fails with:
+## Local Dev
 
-```bash
-error: {
-  "message": "Failed to analyze Mastra application: No \"exports\" main defined in /Users/lejoe/code/playground/mastra-monorepo-01/packages/foo/node_modules/@monorepo/bar/package.json",
-  "details": {
-    "message": "Failed to analyze Mastra application: No \"exports\" main defined in /Users/lejoe/code/playground/mastra-monorepo-01/packages/foo/node_modules/@monorepo/bar/package.json",
-    "domain": "DEPLOYER",
-    "category": "SYSTEM",
-    "details": {}
-  },
-  "code": "DEPLOYER_BUNDLER_ANALYZE_FAILED"
+To use local packages, use pnpm overrides:
+
+```json
+{
+  "pnpm": {
+    "overrides": {
+      "mastra": "link:../../work/mastra/packages/cli",
+      "@mastra/core": "link:../../work/mastra/packages/core",
+      "@mastra/libsql": "link:../../work/mastra/stores/libsql",
+      "@mastra/memory": "link:../../work/mastra/packages/memory",
+      "@mastra/loggers": "link:../../work/mastra/packages/loggers"
+    }
+  }
 }
 ```
+
+## WIP
+
+On this branch and commit the build currently fails with:
+
+NOTHING

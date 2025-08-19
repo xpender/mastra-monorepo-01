@@ -2,12 +2,13 @@ import { openai } from '@ai-sdk/openai';
 import { Agent } from '@mastra/core/agent';
 import { Memory } from '@mastra/memory';
 import { LibSQLStore } from '@mastra/libsql';
-import { weatherTool } from '../tools/weather-tool';
+import { weatherTool } from '../tools';
+import { NAME, OTHER_NAME } from '@monorepo/bar';
 
 export const weatherAgent = new Agent({
   name: 'Weather Agent',
   instructions: `
-      You are a helpful weather assistant that provides accurate weather information and can help planning activities based on the weather.
+      You are a helpful weather assistant that provides accurate weather information and can help planning activities based on the weather. ${NAME} ${OTHER_NAME}
 
       Your primary function is to help users get weather details for specific locations. When responding:
       - Always ask for a location if none is provided
