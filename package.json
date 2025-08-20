@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "pnpm --filter ./packages/bar clean && pnpm --filter ./packages/foo clean",
     "dev": "pnpm --filter ./packages/bar build && --filter ./packages/foo dev",
     "build": "pnpm --filter ./packages/bar build && pnpm --filter ./packages/foo build"
   },
