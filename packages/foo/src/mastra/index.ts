@@ -21,6 +21,6 @@ export const mastra = new Mastra({
     level: "info",
   }),
   bundler: {
-    //externals: ["@huggingface/transformers"],
+    externals: ["@mongodb-js/zstd", "@huggingface/transformers"],
   },
 });
