@@ -23,9 +23,6 @@ importers:
       '@mongodb-js/zstd':
         specifier: ^2.0.1
         version: 2.0.1
-      zod:
-        specifier: ^3.25.76
-        version: 3.25.76
     devDependencies:
       '@types/node':
         specifier: ^22.17.2

@@ -60,7 +60,7 @@ const getWeather = async (location: string) => {
   const embeddingPipeline = new EmbeddingPipeline();
   void embeddingPipeline.initialize();
 
-  void (await myCompress(`just a test`));
+  void (await myCompress("just a test"));
 
   return {
     temperature: data.current.temperature_2m,
