@@ -1,14 +1,13 @@
+import { Mastra } from "@mastra/core/mastra";
+import { PinoLogger } from "@mastra/loggers";
+import { LibSQLStore } from "@mastra/libsql";
+import { weatherWorkflow } from "./workflows/weather-workflow";
+import { weatherAgent } from "./agents/weather-agent";
 
-import { Mastra } from '@mastra/core/mastra';
-import { PinoLogger } from '@mastra/loggers';
-import { LibSQLStore } from '@mastra/libsql';
-import { weatherWorkflow } from './workflows/weather-workflow';
-import { weatherAgent } from './agents/weather-agent';
+import { NAME } from "@monorepo/bar";
+import type { NameType } from "@monorepo/bar";
 
-import { NAME } from "@monorepo/bar"
-import type { NameType } from '@monorepo/bar';
-
-const loggerName: NameType = NAME
+const loggerName: NameType = NAME;
 
 export const mastra = new Mastra({
   workflows: { weatherWorkflow },
@@ -19,9 +18,9 @@ export const mastra = new Mastra({
   }),
   logger: new PinoLogger({
     name: loggerName,
-    level: 'info',
+    level: "info",
   }),
   bundler: {
-    transpilePackages: ['@monorepo/bar']
-  }
+    //externals: ["@huggingface/transformers"],
+  },
 });

@@ -1,5 +1,7 @@
-export const NAME = 'TEST_NAME'
+export const NAME = "TEST_NAME";
 
-export type NameType = typeof NAME
+export type NameType = typeof NAME;
 
-export { OTHER_NAME } from "./something"
+export { OTHER_NAME } from "./something";
+
+export { EmbeddingPipeline } from "./something";

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm --filter ./packages/foo dev",
-    "build": "pnpm --filter ./packages/foo build"
+    "dev": "pnpm --filter ./packages/bar build && --filter ./packages/foo dev",
+    "build": "pnpm --filter ./packages/bar build && pnpm --filter ./packages/foo build"
   },
   "keywords": [],
   "author": "",

@@ -1,4 +1,5 @@
 import { createTool } from '@mastra/core/tools';
+import { EmbeddingPipeline } from '@monorepo/bar';
 import { z } from 'zod';
 
 interface GeocodingResponse {
@@ -55,6 +56,9 @@ const getWeather = async (location: string) => {
 
   const response = await fetch(weatherUrl);
   const data = (await response.json()) as WeatherResponse;
+
+  const embeddingPipeline = new EmbeddingPipeline();
+  void embeddingPipeline.initialize();
 
   return {
     temperature: data.current.temperature_2m,
